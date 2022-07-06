@@ -26,7 +26,7 @@ const News = (props)=>{
         setArticles(parsedData.articles)
         setTotalResults(parsedData.totalResults)
         setLoading(false)
-        props.setProgress(100);
+        // props.setProgress(100);
     }
 
     useEffect(() => {
@@ -53,7 +53,7 @@ const News = (props)=>{
                 <InfiniteScroll
                     dataLength={articles.length}
                     next={fetchMoreData}
-                    hasMore={articles.length == totalResults}
+                    hasMore={articles.length === totalResults}
                     loader={<h4>Loading...</h4>}
                 > 
                     <div className="container">

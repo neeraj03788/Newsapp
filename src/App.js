@@ -4,6 +4,7 @@ import React, { useState } from 'react'
 import NavBar from './components/NavBar';
 import News from './components/News';
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
+import Footer from './components/Footer';
 
 
 const App = ()=> {
@@ -27,6 +28,7 @@ const App = ()=> {
           <Route exact path="/sports" element={<News setProgress={setProgress}apiKey={apiKey} key="sports" pageSize={pageSize} country="in" category="sports"/>}/> 
           <Route exact path="/technology" element={<News setProgress={setProgress}apiKey={apiKey} key="technology" pageSize={pageSize} country="in" category="technology"/>}/> 
         </Routes>
+        <Footer />
         </Router>
       </div>
     )
